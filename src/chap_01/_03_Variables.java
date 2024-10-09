@@ -50,18 +50,18 @@ public class _03_Variables {
         // 단, float은 소수점 아래 6자리까지만 가능!
         d = 3.134567890;
         f = 3.134567890f;
-        System.out.println(d);
-        System.out.println(f);
+        System.out.println(d); // 3.13456789
+        System.out.println(f); // 3.134568
 
 
         // int VS long : long이 더 크고 정밀 (Long은 뒤에 L를 붙여야 함!)
         // int i = 10000000000000; // 오류 -> int가 담기에 너무 큰 수! (int은 최대 21억까지)
         long l = 10000000000000L;
-        System.out.println(l);
+        System.out.println(l); // 10000000000000
 
         // 0 3개 마다 언더바로 구분 가능! 프로그램이 인식하지 않음.
         long l2 = 10_000_000_000_000L;
-        System.out.println(l2);
+        System.out.println(l2); // 10000000000000
 
     }
 }
