@@ -9,7 +9,7 @@ public class _01_Method {
 
     public static void main(String[] args) {
 
-        // 메소드 : 기능을 수행하는 코드들의 묶음
+        // 메소드 : 기능을 수행하는 코드들의 묶음. 정의부와 호출부가 있다.
 
         // 2. 메소드 호출
         System.out.println("메소드 호출 전");
