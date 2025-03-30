@@ -12,6 +12,6 @@ public class _07_VariableScope {
             System.out.println(i);
         }
 
-        System.out.println(i); // 오류 -> for문 밖이기 때문에 지역변수 i 사용 불가능!
+        // System.out.println(i); // 오류 -> for문 밖이기 때문에 지역변수 i 사용 불가능!
     }
 }
