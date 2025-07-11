@@ -1,41 +1,27 @@
 package doIt.chap02;
 
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
 public class quiz_08 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
+
         int n = Integer.parseInt(br.readLine());
         br.close();
 
-        Stack<Integer> st = new Stack<>();
-        for (int i = n; i >= 1; i--) {
-            st.push(i);
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (int i = 0; i < n; i++) {
+            stack.push(i+1);
         }
 
-        Stack<Integer> temp = new Stack<>();
-
-        while (true) {
-            while (st.size() > 1) {
-                st.pop();
-                if (st.size() == 1) {
-                    System.out.println(st.peek());
-                    return;
-                }
-                temp.push(st.pop());
-            }
-
-            while (temp.size() > 1) {
-                st.push(temp.pop());
-                if (temp.size() == 1) {
-                    System.out.println(st.peek());
-                    return;
-                }
-                temp.pop();
-            }
+        while (stack.size() > 2) {
+            stack.removeLast();
+            int temp = stack.removeLast();
+            stack.push(temp);
         }
 
+        System.out.println(stack.pop());
     }
 }
